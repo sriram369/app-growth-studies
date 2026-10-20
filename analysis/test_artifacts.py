@@ -19,6 +19,17 @@ def cached_cell(book, cell, sheet=1):
 
 
 class DownloadedArtifactTests(unittest.TestCase):
+    def test_excel_reporting_dates_have_no_hidden_time_component(self):
+        for book, cell, sheet in [('campaign-analysis.xlsx', 'B5', 1), ('campaign-analysis.xlsx', 'E5', 1), ('campaign-analysis.xlsx', 'A6', 3), ('client-growth.xlsx', 'A6', 2)]:
+            with zipfile.ZipFile(DOWNLOADS / book) as z:
+                root = ET.fromstring(z.read(f'xl/worksheets/sheet{sheet}.xml'))
+                element = root.find(f'.//m:c[@r="{cell}"]', NS)
+                value = element.find('m:v', NS).text
+                if element.get('t') == 'd':
+                    self.assertRegex(value, r'T00:00:00(?:\.000)?Z$')
+                else:
+                    self.assertEqual(float(value), int(float(value)), f'{book} {cell} contains a hidden time component')
+
     def test_no_cached_excel_formula_errors(self):
         for book in ['campaign-analysis.xlsx', 'client-growth.xlsx']:
             with zipfile.ZipFile(DOWNLOADS / book) as z:

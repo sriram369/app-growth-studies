@@ -11,7 +11,7 @@ const out = path.join(root, 'public/downloads');
 const previews = path.join(root, 'tmp/workbook-previews');
 await fs.mkdir(previews, { recursive: true });
 const blue = '#0071E3', gray = '#65656B', ink = '#1D1D1F';
-const date = s => new Date(`${s}T12:00:00Z`);
+const date = s => new Date(`${s}T00:00:00Z`);
 const currency = '"$"#,##0.00;("$"#,##0.00);"$"0.00';
 function base(sheet, last = 'L45') {
   sheet.showGridLines = false;

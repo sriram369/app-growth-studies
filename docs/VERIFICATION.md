@@ -3,7 +3,7 @@
 ## Automated checks
 
 - 13 Vitest tests cover independent SQL-to-TypeScript reconciliation for all eight accounts, weighted metrics, unavailable rates, grouping, small-sample and high-spend boundaries, client-quality priority, budget conservation, no-transfer baseline, scenario bounds, CSV escaping, and conversion intervals.
-- 9 Python tests cover deterministic regeneration, unique observation grain, funnel and bid limits, SQL reconciliation, saved workbook caches, budget conservation in the exported workbook, and PDF page counts.
+- 10 Python tests cover deterministic regeneration, unique observation grain, funnel and bid limits, SQL reconciliation, saved workbook caches, date boundaries, budget conservation in the exported workbook, and PDF page counts.
 - TypeScript strict checking and the production Vite build.
 - GitHub Actions repeats source regeneration, checks for source drift, runs both test suites, and builds before deployment.
 
