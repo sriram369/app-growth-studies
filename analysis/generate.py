@@ -120,7 +120,7 @@ def main():
                    apps=APPS, columns=COLUMNS, records=records)
     (OUT / 'portfolio.json').write_text(json.dumps(dataset, separators=(',', ':')) + '\n')
     with (DOWNLOADS / 'synthetic-campaigns.csv').open('w', newline='') as f:
-        writer = csv.writer(f)
+        writer = csv.writer(f, lineterminator='\n')
         writer.writerow(COLUMNS)
         writer.writerows(records)
     db = sqlite3.connect(':memory:')
@@ -132,7 +132,7 @@ def main():
     aggregates = [dict(r) for r in db.execute(sql)]
     (OUT / 'sql-summary.json').write_text(json.dumps(aggregates, indent=2) + '\n')
     with (DOWNLOADS / 'account-summary.csv').open('w', newline='') as f:
-        writer = csv.DictWriter(f, fieldnames=list(aggregates[0]))
+        writer = csv.DictWriter(f, fieldnames=list(aggregates[0]), lineterminator='\n')
         writer.writeheader()
         writer.writerows(aggregates)
     print(f'Generated {len(records):,} rows, {len(APPS)} advertisers, 90 days. Seed: {SEED}.')
