@@ -153,7 +153,7 @@ def build_brief():
     text(c,'Explore a 15% Competitor-to-Category spend transfer with a 20% marginal Category CPA increase. Keep total spend constant. Demand, auction response, and user quality remain unmodeled.',42,212,520,11)
     text(c, '3. Define the evaluation before the change',42,151,528,13,color=INK,bold=True)
     text(c,'Use mature tap-through CPA, conversion, and new-download mix. Validate post-install quality and agree a budget cap and stop condition. Modeled results are not measured lift.',42,128,520,11)
-    text(c,'Definitions: ads.apple.com/app-store/help-glossary. Reproduce: github.com/sriram369/apple-ads',42,67,528,8)
+    text(c,'Definitions: ads.apple.com/app-store/help-glossary. Reproduce: github.com/sriram369/app-growth-studies',42,67,528,8)
     footer(c,w,1); c.save()
 
 
