@@ -2,7 +2,7 @@
 
 Two independent Apple Ads portfolio case studies by **Sriram Naidu Thota**. Built for demonstrating campaign analysis, Excel reporting, client communication, and commercial judgment.
 
-**[Live portfolio](https://sriram369.github.io/apple-ads/)** · [Campaign demo](https://sriram369.github.io/apple-ads/#/campaigns) · [Advertiser demo](https://sriram369.github.io/apple-ads/#/clients)
+**[Live portfolio](https://sriram369.github.io/app-growth-studies/)** · [Campaign demo](https://sriram369.github.io/app-growth-studies/#/campaigns) · [Advertiser demo](https://sriram369.github.io/app-growth-studies/#/clients)
 
 > All advertisers, account notes, targets, and performance data are fictional. This is an independent portfolio, not an Apple product or an account-management integration. Modeled outcomes are hypothetical; no live campaign lift is claimed.
 
@@ -42,7 +42,7 @@ npm ci
 npm run dev
 ```
 
-Open the printed URL ending in `/apple-ads/`. The app uses hash routes so direct demo links work on GitHub Pages.
+Open the printed URL ending in `/app-growth-studies/`. The app uses hash routes so direct demo links work on GitHub Pages.
 
 ```bash
 npm test

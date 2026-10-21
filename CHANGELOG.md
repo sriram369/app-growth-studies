@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.0.1] - 2026-10-20
+
+### Fixed
+
+- Moved the demo to `/app-growth-studies/` to avoid browser blockers matching the former advertising-related URL.
+- Updated project, source, and report links for the new address.
+
 ## 1.0.0 — 2026-10-20
 
 - Added an Apple-inspired portfolio with two interactive advertising case studies.
